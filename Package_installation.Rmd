@@ -1,0 +1,63 @@
+---
+title: "Community_video_package_installation"
+author: "Bosi Hou"
+date: "2024-10-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Package Installation
+
+1. Direct install
+```{r}
+install.packages("ggplot2")
+library(ggplot2)
+```
+
+2. Github install
+```{r}
+#devtools::install_github("timelyportfolio/parcoords")
+install.packages("parcoords")
+#library(parcoords)
+
+
+```
+
+3. Local install
+```{r}
+install.packages("~/Desktop/PolynomF.tar.gz", repos = NULL, type = "source")
+```
+Note:
+1. Make sure the path is correct
+2. Make sure repos = NULL
+
+```{r}
+library(PolynomF)
+```
+
+```{r}
+p <- polynomial(c(1, -2, 1))
+p
+```
+
+
+5. library() and require()
+```{r}
+library(plotly)
+```
+
+```{r}
+if (!require(plotly)) {
+  install.packages("plotly")
+  library(plotly)
+}
+
+
+
+```
+
+Better error handling / Improving Script Portability
+
